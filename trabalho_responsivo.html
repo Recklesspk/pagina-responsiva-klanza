@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projeto: Página Simples Responsiva</title>
+  <style>
+    
+    body{font-family: Arial, Helvetica, sans-serif; margin:0; color:#222; background:#f7f7f7}
+    a{color:#111; text-decoration:none}
+
+    
+    header{background:#111; color:#fff;}
+    header .wrap{max-width:960px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between}
+    nav a{color:#fff; margin-left:12px; font-size:14px}
+
+    
+    main .wrap{max-width:960px; margin:0 auto; padding:16px}
+    .hero{background:#fff; border:1px solid #ddd; border-radius:8px; padding:16px; margin-top:16px}
+
+    
+    .cols{display:grid; grid-template-columns: 1fr; gap:12px}
+    @media (min-width: 700px){ .cols{ grid-template-columns: repeat(3, 1fr);} }
+    .card{background:#fff; border:1px solid #ddd; border-radius:8px; padding:12px}
+
+    
+    .galeria{display:grid; grid-template-columns: 1fr 1fr; gap:8px}
+    @media (min-width: 700px){ .galeria{ grid-template-columns: repeat(4, 1fr);} }
+    .galeria div{background:#e5e5e5; border:1px solid #ccc; height:120px; display:flex; align-items:center; justify-content:center; font-size:14px}
+
+    
+    form label{display:block; margin-top:10px}
+    form input, form textarea{width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-top:6px; background:#fff}
+    form button{margin-top:10px; padding:10px 14px; border:0; background:#111; color:#fff; border-radius:6px; cursor:pointer}
+
+    footer{text-align:center; font-size:12px; color:#666; padding:16px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <strong>KLANZA Estamparia</strong>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="sobre">
+        <h1>Klanza estamparia</h1>
+        <p>Trabalho da disciplina de Desenvolvimento Web. HTML + CSS básico - site para estamparia klanza.</p>
+      </section>
+
+      <section id="servicos" style="margin-top:16px">
+        <h2>Serviços</h2>
+        <div class="cols">
+          <div class="card">
+            <h3>DTF</h3>
+            <p>Estampa para camisetas.</p>
+          </div>
+          <div class="card">
+            <h3>Sublimação</h3>
+            <p>Peças esportivas e brancas.</p>
+          </div>
+          <div class="card">
+            <h3>Arte</h3>
+            <p>Montagem do arquivo e mockup.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" style="margin-top:16px">
+        <h2>Galeria</h2>
+        <div class="galeria">
+          <div>Foto 1</div>
+          <div>Foto 2</div>
+          <div>Foto 3</div>
+          <div>Foto 4</div>
+        </div>
+        
+      </section>
+
+      <section id="contato" style="margin-top:16px">
+        <h2>Contato</h2>
+        <form>
+          <label>Nome
+            <input type="text" placeholder="Seu nome" />
+          </label>
+          <label>E-mail
+            <input type="email" placeholder="seuemail@exemplo.com" />
+          </label>
+          <label>Mensagem
+            <textarea rows="4" placeholder="O que você precisa?"></textarea>
+          </label>
+          <button type="button" onclick="alert('Formulário simples só para demonstração.')">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2025 — Feito pelo grupo para a faculdade.</div>
+  </footer>
+</body>
+</html>
